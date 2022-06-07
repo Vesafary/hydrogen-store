@@ -1,0 +1,204 @@
+[
+    {
+        "id": 1,
+        "name": "shale A",
+        "toc": 0.08,
+        "composition": [
+            {
+                "name": "quartz",
+                "weight_percentage": 28
+            },
+            {
+                "name": "dolomite",
+                "weight_percentage": 3
+            },
+            {
+                "name": "calcite",
+                "weight_percentage": 58
+            },
+            {
+                "name": "muscovite-illite",
+                "weight_percentage": 8
+            },
+            {
+                "name": "chlorite",
+                "weight_percentage": 2
+            },
+            {
+                "name": "hematite",
+                "weight_percentage": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "shale B",
+        "toc": 0.10,
+        "composition": [
+            {
+                "name": "quartz",
+                "weight_percentage": 30
+            },
+            {
+                "name": "kaolinite",
+                "weight_percentage": 7
+            },
+            {
+                "name": "siderite",
+                "weight_percentage": 6
+            },
+            {
+                "name": "muscovite-illite",
+                "weight_percentage": 33
+            },
+            {
+                "name": "chlorite",
+                "weight_percentage": 16
+            },
+            {
+                "name": "anatase",
+                "weight_percentage": 1
+            },
+            {
+                "name": "albite",
+                "weight_percentage": 4
+            },
+            {
+                "name": "potassium feldspar",
+                "weight_percentage": 1
+            },
+            {
+                "name": "goethite",
+                "weight_percentage": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "shale C",
+        "toc": 0.09,
+        "composition": [
+            {
+                "name": "quartz",
+                "weight_percentage": 25
+            },
+            {
+                "name": "chlorite",
+                "weight_percentage": 20
+            },
+            {
+                "name": "siderite",
+                "weight_percentage": 2
+            },
+            {
+                "name": "muscovite-illite",
+                "weight_percentage": 27
+            },
+            {
+                "name": "amorphous",
+                "weight_percentage": 10
+            },
+            {
+                "name": "anatase",
+                "weight_percentage": 1
+            },
+            {
+                "name": "albite",
+                "weight_percentage": 10
+            },
+            {
+                "name": "smectite group",
+                "weight_percentage": 5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "evaporite",
+        "toc": 0.01,
+        "composition": [
+            {
+                "name": "anhydrite",
+                "weight_percentage": 1
+            },
+            {
+                "name": "gypsum",
+                "weight_percentage": 99
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "oil shale A",
+        "toc": 4.95,
+        "composition": [
+            {
+                "name": "pyrite",
+                "weight_percentage": 6
+            },
+            {
+                "name": "calcite",
+                "weight_percentage": 28
+            },
+            {
+                "name": "dolomite",
+                "weight_percentage": 30
+            },
+            {
+                "name": "quartz",
+                "weight_percentage": 12
+            },
+            {
+                "name": "potassium feldspar",
+                "weight_percentage": 4
+            },
+            {
+                "name": "illite",
+                "weight_percentage": 15
+            },
+            {
+                "name": "amorphous",
+                "weight_percentage": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "oil shale B",
+        "toc": 14,
+        "composition": [
+            {
+                "name": "pyrite",
+                "weight_percentage": 3
+            },
+            {
+                "name": "calcite",
+                "weight_percentage": 56
+            },
+            {
+                "name": "dolomite",
+                "weight_percentage": 3
+            },
+            {
+                "name": "quartz",
+                "weight_percentage": 9
+            },
+            {
+                "name": "potassium feldspar",
+                "weight_percentage": 4
+            },
+            {
+                "name": "gypsum",
+                "weight_percentage": 1
+            },
+            {
+                "name": "amorphous",
+                "weight_percentage": 20
+            },
+            {
+                "name": "clay mineral",
+                "weight_percentage": 4
+            }
+        ]
+    }
+]

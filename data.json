@@ -1,0 +1,112 @@
+[
+    {
+        "source": "Hosseini",
+        "rock_type": 1,
+        "data": [
+            {
+                "temperature": 298,
+                "type": "advancing",
+                "points": [
+                    {
+                        "pressure": 0,
+                        "contact_angle": 0
+                    },
+                    {
+                        "pressure": 5,
+                        "contact_angle": 27
+                    },
+                    {
+                        "pressure": 10,
+                        "contact_angle": 34
+                    },
+                    {
+                        "pressure": 15,
+                        "contact_angle": 41
+                    },
+                    {
+                        "pressure": 20,
+                        "contact_angle": 47
+                    }
+                ]
+            },
+            {
+                "temperature": 298,
+                "type": "receding",
+                "points": [
+                    {
+                        "pressure": 0,
+                        "contact_angle": 0
+                    },
+                    {
+                        "pressure": 5,
+                        "contact_angle": 22
+                    },
+                    {
+                        "pressure": 10,
+                        "contact_angle": 29
+                    },
+                    {
+                        "pressure": 15,
+                        "contact_angle": 35
+                    },
+                    {
+                        "pressure": 20,
+                        "contact_angle": 41
+                    }
+                ]
+            },
+            {
+                "temperature": 353,
+                "type": "advancing",
+                "points": [
+                    {
+                        "pressure": 0,
+                        "contact_angle": 0
+                    },
+                    {
+                        "pressure": 5,
+                        "contact_angle": 17
+                    },
+                    {
+                        "pressure": 10,
+                        "contact_angle": 23
+                    },
+                    {
+                        "pressure": 15,
+                        "contact_angle": 28
+                    },
+                    {
+                        "pressure": 20,
+                        "contact_angle": 30
+                    }
+                ]
+            },
+            {
+                "temperature": 353,
+                "type": "receding",
+                "points": [
+                    {
+                        "pressure": 0,
+                        "contact_angle": 0
+                    },
+                    {
+                        "pressure": 5,
+                        "contact_angle": 14
+                    },
+                    {
+                        "pressure": 10,
+                        "contact_angle": 20
+                    },
+                    {
+                        "pressure": 15,
+                        "contact_angle": 25
+                    },
+                    {
+                        "pressure": 20,
+                        "contact_angle": 27
+                    }
+                ]
+            }
+        ]
+    }
+]
