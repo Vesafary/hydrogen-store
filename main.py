@@ -1,6 +1,5 @@
 import json
 
-from rock import Rock, rocks
 from formulae import *
 
 
@@ -9,6 +8,8 @@ def main():
 
     for source in data:
         for series in source["data"]:
+            print("-----")
+            print(f"{series['temperature']}K - {series['type']}")
             for datapoint in series["points"]:
                 g = gamma(datapoint["pressure"], series["temperature"], 1.05)
 
