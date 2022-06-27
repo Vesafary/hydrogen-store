@@ -65,5 +65,4 @@ class Series:
             xs, ys, errs = res.finish()
 
             plt.errorbar(xs, ys, yerr=errs, label=temperature)
-        print(self.rock_type)
         plt.show()

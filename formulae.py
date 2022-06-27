@@ -44,7 +44,6 @@ def delta_rho(pressure: float, temperature: float, salinity: float) -> float:
     """
     """
     R = 8.314472
-    print(density_brine(temperature, salinity) - (pressure * 2.016) / (R * temperature))
     return density_brine(temperature, salinity) - (pressure * 2.016) / (R * temperature)
 
 
@@ -54,10 +53,10 @@ def density_brine(temperature: float, salinity: float) -> float:
     https://www.journal-of-agroalimentary.ro/admin/articole/58458L8_Vol_21(1)_2015_41_52.pdf
     
     Interpolation between both concentration and temperature.
-    Assumes the salt is NaCL.
+    Assumes the salt is NaCl.
 
     :param temperature: Temperature in K
-    :param salinity: Salinity in mol / L
+    :param salinity: Salinity in g / L
     :return: density in gram / L
     """
 
@@ -65,6 +64,7 @@ def density_brine(temperature: float, salinity: float) -> float:
     molar_weight_salt = 58.443
     
     weight_percentage = salinity * molar_weight_salt / weight_water * 100
+    print(weight_percentage)
 
     available_percentages = sorted(brine_table.keys())
     

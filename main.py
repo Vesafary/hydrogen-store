@@ -15,7 +15,7 @@ def main():
     res = {}
 
     pore_size_range = (1, 100)
-    salinity = 1.05
+    salinity_range = (0.5, 3.5)
 
     for source in data:
         rt = source["rock_type"]
@@ -24,8 +24,8 @@ def main():
             res[rt] = Series(rt)
 
         for _ in range(100):
-            pore_size = round((pore_size_range[1] - pore_size_range[0]) * random() + pore_size_range[0]) / 10**9            
-            
+            pore_size = round((pore_size_range[1] - pore_size_range[0]) * random() + pore_size_range[0]) / 10**9
+            salinity = round((salinity_range[1] - salinity_range[0]) * random(), 2) + salinity_range[0]
             res[rt].run(source["data"], pore_size, salinity)
 
     for _, series in res.items():
