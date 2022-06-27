@@ -200,5 +200,126 @@
                 "weight_percentage": 4
             }
         ]
+    },
+    {
+        "id": 7,
+        "name": "Montmorillonite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "montmorillonite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Illite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "illite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Kaolinite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "kaolinite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Calcite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "calcite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Dolomite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "dolomite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Quartz",
+        "toc": null,
+        "composition": [
+            {
+                "name": "quartz",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Basalt",
+        "toc": null,
+        "composition": [
+            {
+                "name": "basalt",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Granite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "granite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "shale",
+        "toc": null,
+        "composition": [
+            {
+                "name": "shale",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Anhydrite",
+        "toc": null,
+        "composition": [
+            {
+                "name": "anhydrite",
+                "weight_percentage": 100
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Gypsum",
+        "toc": null,
+        "composition": [
+            {
+                "name": "gypsum",
+                "weight_percentage": 100
+            }
+        ]
     }
 ]

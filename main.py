@@ -1,19 +1,35 @@
 import json
+import matplotlib.pyplot as plt
 
+from collections import defaultdict
 from formulae import *
+from random import random
+from typing import List, Tuple
+
+from result import Result, Series
 
 
 def main():
     rock_types, data = read_data()
 
-    for source in data:
-        for series in source["data"]:
-            print("-----")
-            print(f"{series['temperature']}K - {series['type']}")
-            for datapoint in series["points"]:
-                g = gamma(datapoint["pressure"], series["temperature"], 1.05)
+    res = {}
 
-                print(f"{capilary_pressure(g, datapoint['contact_angle'], 0.000000005) / 1000000} MPa")
+    pore_size_range = (1, 100)
+    salinity = 1.05
+
+    for source in data:
+        rt = source["rock_type"]
+            
+        if rt not in res:
+            res[rt] = Series(rt)
+
+        for _ in range(100):
+            pore_size = round((pore_size_range[1] - pore_size_range[0]) * random() + pore_size_range[0]) / 10**9            
+            
+            res[rt].run(source["data"], pore_size, salinity)
+
+    for _, series in res.items():
+        series.plot()
 
 
 def read_data():

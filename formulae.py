@@ -1,4 +1,5 @@
 import math
+from brine_table import brine_table
 
 
 def capilary_pressure(gamma: float, theta: float, r: float) -> float:
@@ -16,7 +17,7 @@ def column_height(gamma: float, theta: float, r: float, delta_rho: float) -> flo
     :param gamma: Interfacial pressure between gas and water
     :param theta: Receding contact angle
     :param r: Pore throat radius of caprock
-    :param delta_rho: Density difference between caprock and gas
+    :param delta_rho: Density difference between brine and gas
     :return: Capilary pressure
     """
     return capilary_pressure(gamma, theta, r) / (delta_rho * 9.81)
@@ -37,3 +38,53 @@ def gamma(pressure: float, temperature: float, salinity: float) -> float:
     B = 135.41479 - 0.38368 * pressure - 0.20520 * temperature + 0.00084 * pressure * temperature 
 
     return A * salinity + B
+
+
+def delta_rho(pressure: float, temperature: float, salinity: float) -> float:
+    """
+    """
+    R = 8.314472
+    print(density_brine(temperature, salinity) - (pressure * 2.016) / (R * temperature))
+    return density_brine(temperature, salinity) - (pressure * 2.016) / (R * temperature)
+
+
+def density_brine(temperature: float, salinity: float) -> float:
+    """
+    Makes a linear interpolation of the table from brine_table.py, which is copied from 
+    https://www.journal-of-agroalimentary.ro/admin/articole/58458L8_Vol_21(1)_2015_41_52.pdf
+    
+    Interpolation between both concentration and temperature.
+    Assumes the salt is NaCL.
+
+    :param temperature: Temperature in K
+    :param salinity: Salinity in mol / L
+    :return: density in gram / L
+    """
+
+    weight_water = 998.17
+    molar_weight_salt = 58.443
+    
+    weight_percentage = salinity * molar_weight_salt / weight_water * 100
+
+    available_percentages = sorted(brine_table.keys())
+    
+    keys_to_take = []
+
+    for a, b in zip(available_percentages, available_percentages[1::]):
+        if a <= weight_percentage <= b:
+            keys_to_take = [a, b]
+            break
+    
+    density = 0
+
+    for key in keys_to_take:
+        available_temperatures = sorted(brine_table.get(key).keys())
+        for (a, b) in zip(available_temperatures, available_temperatures[1::]):
+            if a <= temperature <= b:
+                ta_diff = temperature - a
+                tb_diff = temperature - b
+                density += (key / sum(keys_to_take)) * (a / (a + b)) * brine_table.get(key).get(a)
+                density += (key / sum(keys_to_take)) * (b / (a + b)) * brine_table.get(key).get(b)
+                break
+    
+    return density
