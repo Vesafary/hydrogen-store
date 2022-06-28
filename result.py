@@ -64,5 +64,6 @@ class Series:
         for (temperature, angle_type), res in self.results.items():
             xs, ys, errs = res.finish()
 
-            plt.errorbar(xs, ys, yerr=errs, label=temperature)
+            plt.errorbar(xs, ys, yerr=errs, label=f"{angle_type}, {temperature} K", capsize=5)
+        plt.legend(loc="upper right")
         plt.show()
